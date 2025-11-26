@@ -1,0 +1,9 @@
+{
+  "port": 8080,
+  "log-level": "info",
+  "log-file": null,
+  "max-connections": 100,
+  "request-timeout": 30
+}
+
+

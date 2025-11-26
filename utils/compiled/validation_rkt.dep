@@ -1,0 +1,1 @@
+("8.10" ta6le ("64080513be590222280bfd4c5d63016926406db2" . "c0966e5cfb40a87d22c62358f4cfee02f839a209") #"/home/main/devops/epistemic-observability-engine/utils/../kernel-spec.rkt" #"/home/main/devops/epistemic-observability-engine/utils/errors.rkt" (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"string.rkt"))

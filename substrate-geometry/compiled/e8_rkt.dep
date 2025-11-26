@@ -1,0 +1,1 @@
+("8.10" ta6le ("96c3b0e45532431c2d618954799dc9edd068eabb" . "9014f01c664ce35233e746b8d26840e3d1785790") #"/home/main/devops/epistemic-observability-engine/substrate-geometry/../kernel-spec.rkt" (collects #"racket" #"base.rkt") (collects #"racket" #"list.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"vector.rkt"))

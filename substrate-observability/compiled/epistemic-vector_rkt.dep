@@ -1,0 +1,1 @@
+("8.10" ta6le ("fb022b119633de8032ccc9acf64b8e52b419aa7e" . "fec73edbcebf81341b9493d233b17f2983c52acf") #"/home/main/devops/epistemic-observability-engine/substrate-observability/../kernel-spec.rkt" (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt"))
