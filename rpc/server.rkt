@@ -170,6 +170,11 @@
            [("render_600cell")
             (let ((state (json->e8-point (hash-ref params 'state))))
               (handle-rpc-render-600cell state))]
+           ;; ZK-STARK RPC Methods
+           [("zk.canonicalize")
+            (handle-rpc-zk-canonicalize params)]
+           [("zk.verify")
+            (handle-rpc-zk-verify params)]
            [else
             (error (format "Unknown method: ~a" method))])))
     (let* ((end-time (current-inexact-milliseconds))

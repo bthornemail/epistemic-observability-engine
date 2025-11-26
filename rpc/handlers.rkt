@@ -16,6 +16,8 @@
          "../substrate-logic/access-control.rkt"
          "../substrate-observability/qstar.rkt"
          "../substrate-observability/parameterize.rkt"
+         "../substrate-zk/circuit.rkt"
+         "../substrate-zk/field-selection.rkt"
          "../utils/errors.rkt"
          "../utils/validation.rkt"
          racket/date
@@ -40,7 +42,10 @@
  handle-rpc-octonion-multiply
  ;; H₄ RPC Methods
  handle-rpc-zoom-role
- handle-rpc-render-600cell)
+ handle-rpc-render-600cell
+ ;; ZK-STARK RPC Methods
+ handle-rpc-zk-canonicalize
+ handle-rpc-zk-verify)
 
 ;; Handle RPC canonicalize request
 (define (handle-rpc-canonicalize vec)
@@ -254,4 +259,56 @@
                'faces 1200
                'cells 600
                'golden-ratio golden-ratio)))))
+
+;; ==============================================================================
+;; ZK-STARK RPC Methods
+;; ==============================================================================
+
+(define (handle-rpc-zk-canonicalize params)
+  "ZK canonicalization with proof generation.
+   
+   Parameters: {\"vector\": [x1, x2, ..., x8], \"field_bits\": 256}
+   Returns: {\"canonical\": [...], \"proof\": {...}, \"f_max\": 0.00886}"
+  (handle-errors
+   (lambda ()
+     (let* ((vec (hash-ref params 'vector))
+            (field-bits (hash-ref params 'field_bits 256))
+            (e8-vec (if (E8-Point? vec) vec (validate-e8-point vec)))
+            (field (find-suitable-prime field-bits))
+            (result (zk-canonicalization-protocol e8-vec field))
+            (canonical-vec (car result))
+            (proof (cdr result)))
+       (hasheq 'canonical (if (F4-Point? canonical-vec)
+                             (F4-Point-coords canonical-vec)
+                             (if (E8-Point? canonical-vec)
+                                 (E8-Point-coords canonical-vec)
+                                 canonical-vec))
+               'proof (hasheq 'trace-length (length (ZK-Proof-trace proof))
+                             'f-max (ZK-Proof-f-max proof)
+                             'field (ZK-Proof-field proof)
+                             'commitments (ZK-Proof-commitments proof))
+               'f-max (ZK-Proof-f-max proof))))))
+
+(define (handle-rpc-zk-verify params)
+  "Verify ZK-STARK proof.
+   
+   Parameters: {\"proof\": {...}, \"input\": [...], \"output\": [...]}
+   Returns: {\"valid\": true/false, \"f_max_bound\": 0.00886}"
+  (handle-errors
+   (lambda ()
+     (let* ((proof-data (hash-ref params 'proof))
+            (input-vec (hash-ref params 'input))
+            (output-vec (hash-ref params 'output))
+            (e8-input (if (E8-Point? input-vec) input-vec (validate-e8-point input-vec)))
+            (e8-output (if (E8-Point? output-vec) output-vec (validate-e8-point output-vec)))
+            (field (hash-ref proof-data 'field))
+            (trace (hash-ref proof-data 'trace '()))
+            (f-max (hash-ref proof-data 'f-max))
+            (constraints (hash-ref proof-data 'constraints '()))
+            (commitments (hash-ref proof-data 'commitments))
+            ;; Reconstruct proof object
+            (proof (ZK-Proof e8-input e8-output trace constraints f-max field commitments))
+            (is-valid (verify-proof proof)))
+       (hasheq 'valid is-valid
+               'f-max-bound f-max)))))
 

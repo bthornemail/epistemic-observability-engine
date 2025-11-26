@@ -9,7 +9,8 @@
          "substrate-geometry-tests.rkt"
          "substrate-observability-tests.rkt"
          "substrate-logic-tests.rkt"
-         "substrate-inverse-tests.rkt")
+         "substrate-inverse-tests.rkt"
+         "substrate-zk-tests.rkt")
 
 (provide
  run-all-tests)
@@ -21,7 +22,8 @@
    all-substrate-geometry-tests
    all-substrate-observability-tests
    all-substrate-logic-tests
-   all-substrate-inverse-tests))
+   all-substrate-inverse-tests
+   all-substrate-zk-tests))
 
 (define (run-all-tests)
   "Run all tests and return test results"
