@@ -134,7 +134,10 @@ epistemic-observability-engine/
 ├── substrate-logic/        # Package C
 ├── substrate-observability/ # Package D (CRITICAL)
 ├── rpc/                     # JSON-RPC interface
-└── tests/                   # Test suite
+├── tests/                   # Test suite
+└── docs/                    # Documentation
+    ├── SYSTEM_ROADMAP.md    # Navigation guide for geometric-algebraic framework
+    └── INTEGRATION_GUIDE.md # Integration plan for polyspherical/rotor framework
 ```
 
 ## Rectifications

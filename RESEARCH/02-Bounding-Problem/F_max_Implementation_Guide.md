@@ -1,3 +1,27 @@
+---
+id: f-max-implementation-guide
+title: "Implementation Guide: Computing ℱ_max"
+level: intermediate
+type: tutorial
+tags: [f-max, implementation-guide, numerical-estimation, algebraic-proof, e8-f4-projection]
+keywords: [f-max-implementation, numerical-estimation, algebraic-proof, e8-f4-projection, pi84-matrix, commutativity-error]
+prerequisites: [executive-action-plan-op-9-3-9-4]
+enables: []
+related: [executive-action-plan-op-9-3-9-4, fano-plane-theoretical-framework-f-max]
+readingTime: 35
+difficulty: 4
+blackboard:
+  status: active
+  assignedAgent: null
+  lastUpdate: 2025-01-27
+  dependencies: []
+  watchers: []
+  r5rsEngine: null
+  selfBuilding:
+    enabled: false
+    source: null
+    pattern: null
+---
 # Implementation Guide: Computing ℱ_max
 **Practical Steps to Resolve Open Problems 9.3 & 9.4**
 

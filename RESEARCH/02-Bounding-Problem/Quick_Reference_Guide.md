@@ -1,3 +1,27 @@
+---
+id: quick-reference-open-problems-9-3-9-4
+title: "Quick Reference: Open Problems 9.3 & 9.4"
+level: intermediate
+type: reference
+tags: [open-problems, zk-arithmetization, visualization-faithfulness, quick-reference, f-max]
+keywords: [open-problems-9-3, open-problems-9-4, zk-arithmetization, visualization-faithfulness, commutativity-error, f-max-bound]
+prerequisites: [fano-plane-theoretical-framework-f-max]
+enables: []
+related: [fano-plane-theoretical-framework-f-max, zk-stark-implementation-e8]
+readingTime: 10
+difficulty: 2
+blackboard:
+  status: active
+  assignedAgent: null
+  lastUpdate: 2025-01-27
+  dependencies: []
+  watchers: []
+  r5rsEngine: null
+  selfBuilding:
+    enabled: false
+    source: null
+    pattern: null
+---
 # Quick Reference: Open Problems 9.3 & 9.4
 **One-Page Visual Guide**
 

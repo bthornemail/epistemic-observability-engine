@@ -10,7 +10,7 @@
 
 (require "../kernel-spec.rkt"
          "e8.rkt"
-         "weyl.rkt"
+         (only-in "weyl.rkt" canonicalize-to-dominant)
          "h4.rkt"
          racket/list
          racket/vector

@@ -80,7 +80,7 @@
                        (set! t (modulo (* t c) p))
                        (set! r (modulo (* r b) p))
                        (loop-main))
-                     (find-i (+ i 1) (modulo (* tt tt) p)))))))])))
+                     (find-i (+ i 1) (modulo (* tt tt) p))))))))])
 
 ;; ==============================================================================
 ;; Find Suitable Prime

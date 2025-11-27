@@ -70,3 +70,7 @@ None (first release)
 Based on the Unified Geometric Computing Theory and the Vision-Epistemic Isomorphism research.
 
 
+
+
+
+

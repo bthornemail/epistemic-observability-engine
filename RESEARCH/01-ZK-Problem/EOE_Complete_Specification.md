@@ -1,3 +1,27 @@
+---
+id: eoe-complete-specification
+title: "The Epistemic Observability Engine: Complete Architectural Specification"
+level: intermediate
+type: specification
+tags: [eoe, complete-specification, exceptional-lie-groups, dimensional-descent, e8, e7, e6, f4, g2, h4]
+keywords: [eoe-specification, exceptional-lie-groups, dimensional-descent, e8-canonicalization, e7-reality-engine, f4-perception-layer, g2-non-associative]
+prerequisites: [the-epistemic-observability-engine]
+enables: []
+related: [the-epistemic-observability-engine, eoe-technical-appendix-algebraic-geometric-foundations]
+readingTime: 50
+difficulty: 4
+blackboard:
+  status: active
+  assignedAgent: null
+  lastUpdate: 2025-01-27
+  dependencies: []
+  watchers: []
+  r5rsEngine: null
+  selfBuilding:
+    enabled: false
+    source: null
+    pattern: null
+---
 # The Epistemic Observability Engine: Complete Architectural Specification
 **A Unified Framework for Exceptional Lie Groups, Sacred Geometry, and Computational Consciousness**
 

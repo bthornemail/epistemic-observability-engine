@@ -1,3 +1,27 @@
+---
+id: eoe-polytope-hierarchy-canonical
+title: "The Polytope Hierarchy of the Epistemic Observability Engine"
+level: intermediate
+type: reference
+tags: [eoe, polytope-hierarchy, 24-cell, 600-cell, 120-cell, 5-cell, e8-421, sacred-geometry]
+keywords: [polytope-hierarchy, 24-cell, 600-cell, 120-cell, 5-cell, e8-421, f4-polytope, h4-polytope, sacred-geometry]
+prerequisites: [eoe-complete-specification]
+enables: []
+related: [eoe-complete-specification, the-epistemic-observability-engine]
+readingTime: 30
+difficulty: 3
+blackboard:
+  status: active
+  assignedAgent: null
+  lastUpdate: 2025-01-27
+  dependencies: []
+  watchers: []
+  r5rsEngine: null
+  selfBuilding:
+    enabled: false
+    source: null
+    pattern: null
+---
 # The Polytope Hierarchy of the Epistemic Observability Engine
 **Canonical Reference · Version 3.0**  
 **Date:** 2025-11-26  

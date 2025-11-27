@@ -1,3 +1,27 @@
+---
+id: sphere-over-ring-dimensional-bridge
+title: "Sphere Over Ring: The Dimensional Bridge"
+level: intermediate
+type: explanation
+tags: [spheres, dimensional-bridge, trigonometry, mobius-transformations, one-point-compactification]
+keywords: [n-spheres, s0, s1, s2, s3, dimensional-bridge, trigonometry, mobius-transformations, quaternions, one-point-compactification]
+prerequisites: []
+enables: []
+related: [geometric-type-theory-racket]
+readingTime: 15
+difficulty: 3
+blackboard:
+  status: active
+  assignedAgent: null
+  lastUpdate: 2025-01-27
+  dependencies: []
+  watchers: []
+  r5rsEngine: null
+  selfBuilding:
+    enabled: false
+    source: null
+    pattern: null
+---
 Searching the files for dimensional context and sphere-related content.
 
 

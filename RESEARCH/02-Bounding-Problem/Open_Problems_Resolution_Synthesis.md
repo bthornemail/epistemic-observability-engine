@@ -1,3 +1,27 @@
+---
+id: open-problems-resolution-synthesis
+title: "Open Problems 9.3 & 9.4: Resolution Synthesis"
+level: intermediate
+type: explanation
+tags: [open-problems, resolution-synthesis, commutativity-error-polynomial, unified-solution, f-max]
+keywords: [open-problems-9-3-9-4, resolution-synthesis, commutativity-error-polynomial, unified-solution, f-max-bound]
+prerequisites: [fano-plane-theoretical-framework-f-max]
+enables: []
+related: [fano-plane-theoretical-framework-f-max, quick-reference-open-problems-9-3-9-4, executive-action-plan-op-9-3-9-4]
+readingTime: 20
+difficulty: 3
+blackboard:
+  status: active
+  assignedAgent: null
+  lastUpdate: 2025-01-27
+  dependencies: []
+  watchers: []
+  r5rsEngine: null
+  selfBuilding:
+    enabled: false
+    source: null
+    pattern: null
+---
 # Open Problems 9.3 & 9.4: Resolution Synthesis
 **Unified Solution via Commutativity Error Polynomial**
 

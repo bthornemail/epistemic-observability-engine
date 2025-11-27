@@ -6,7 +6,7 @@
 
 (require "../kernel-spec.rkt"
          "e8.rkt"
-         "f4.rkt"
+         (only-in "f4.rkt" f4-get-simple-roots f4-canonicalize-to-dominant)
          "e6.rkt"
          "e7.rkt"
          "g2.rkt"
