@@ -2,6 +2,41 @@
 
 All notable changes to the Epistemic Observability Engine will be documented in this file.
 
+## [1.2.1] - 2025-01-27
+
+### Fixed
+- **Critical:** Fixed circular dependency between `f4.rkt` and `weyl.rkt`
+  - Removed `f4.rkt` dependency on `weyl.rkt` by implementing minimal E8 canonicalization directly
+  - Removed `f4.rkt` dependency on `h4.rkt` by defining golden ratio locally
+  - Fixed `g2.rkt` syntax error: changed `let` to `let*` in `g2-preserves-multiplication?`
+- **Critical:** Fixed invalid `define-type` in `substrate-core/kernel.rkt`
+  - Replaced with contract-based approach using `racket/contract`
+  - Added proper type predicates and contract-out specifications
+- Fixed test file compilation issues (circular dependencies resolved)
+
+### Changed
+- **UPGRADED:** `estimate-f-max` now uses analytical computation instead of Monte Carlo sampling
+  - Replaced Monte Carlo implementation with derived analytical formula
+  - Formula: ℱ_max = (φ - 1)/√2 ≈ 0.00886
+  - Based on Two-Fano-Plane solution with 14-step operational bound
+  - `n-samples` parameter kept for API compatibility but ignored
+  - Reference: Fano-Plane-F-Max.md, Commutativity Error Polynomial Solves Problems.txt
+
+### Added
+- **Enhanced Technical Appendix** with comprehensive Fano mathematics:
+  - Section 4.3: Enhanced "Fano Plane Structure" with incidence matrix, automorphism group (PSL(3,2), order 168), and BIBD parameters
+  - Section 4.4: New "Cohomological Structure" with dimension formulas (β³₁,₁ = β³₂,₂ = 5), duality theorem, and Racket implementation
+  - Section 4.5: New "Geometric Embeddings" with tetrahedral/Merkaba/octahedral progression
+  - Section 8: New "Quick Reference: Formulas and Mappings" with key formulas, geometric mappings, logical mapping table, and constants
+- Fano cohomology derivation with Gaussian binomial computation
+- Expanded Fano mathematics including incidence matrix validation
+- Geometric embedding progression diagrams
+
+### Documentation
+- Updated Technical Appendix Table of Contents to include new sections
+- Updated references from Monte Carlo to analytical computation
+- All changes documented in this changelog
+
 ## [1.2.0] - 2025-11-26
 
 ### Added

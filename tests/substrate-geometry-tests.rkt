@@ -142,7 +142,7 @@
               (let* ((p1 (make-f4-point (list 0 0 0 0)))
                      (p2 (make-f4-point (list 1 1 1 1)))
                      (interp (h4-geodesic p1 p2 0.5)))
-                (check-true (F4-Point? interp)))
+                (check-true (F4-Point? interp))))
    
    ;; Commutativity Error (ℱ) Tests - Two-Fano-Plane Solution
    (test-case "Commutativity error computation"
@@ -245,5 +245,4 @@
                 (check-true (hash-has-key? analysis 'preserved-f4-norm))
                 (check-true (hash-has-key? analysis 'lost-norm))
                 (check-true (hash-has-key? analysis 'preservation-ratio))
-                (check-true (real? (hash-ref analysis 'preservation-ratio)))))))
-
+                (check-true (real? (hash-ref analysis 'preservation-ratio))))))))
